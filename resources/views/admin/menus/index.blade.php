@@ -15,40 +15,49 @@
                     <thead class="text-xs text-gray-700 uppercase bg-gray-50 ">
                         <tr>
                             <th scope="col" class="px-6 py-3">
-                                Product name
+                                Name
                             </th>
                             <th scope="col" class="px-6 py-3">
-                                Color
+                                Image
                             </th>
                             <th scope="col" class="px-6 py-3">
-                                Category
+                                Description
                             </th>
                             <th scope="col" class="px-6 py-3">
                                 Price
                             </th>
                             <th scope="col" class="px-6 py-3">
-                                Edit
+                                Action
                             </th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class="bg-white border-b hover:bg-gray-50">
-                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
-                                Apple MacBook Pro 17"
-                            </th>
-                            <td class="px-6 py-4">
-                                Silver
-                            </td>
-                            <td class="px-6 py-4">
-                                Laptop
-                            </td>
-                            <td class="px-6 py-4">
-                                $2999
-                            </td>
-                            <td class="px-6 py-4 text-right">
-                                <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
-                            </td>
-                        </tr>
+                        @foreach ($menus as $menu)
+                            <tr class="bg-white border-b hover:bg-gray-50">
+                                <td scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                    {{ $menu->name }}
+                                </td>
+                                <td class="px-6 py-4">
+                                    <img src="{{ Storage::url($menu->image) }}" class="w-16 h-16 object-cover rounded">
+                                </td>
+                                <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                    {{ $menu->description }}
+                                </td>
+                                <td scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                    Rp{{ $menu->price }}
+                                </td>
+                                <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                    <div class="flex space-x-2">
+                                        <a href="{{ route('admin.menus.edit', $menu->id) }}" class="px-4 py-2 bg-yellow-500 hover:bg-yellow-700 rounded-lg text-white">Edit</a>
+                                        <form class="px-4 py-2 bg-red-500 hover:bg-red-700 rounded-lg text-white" method="POST" action="{{ route('admin.menus.destroy', $menu->id) }}" onsubmit="return confirm('Are you Sure?');">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit">Delete</button>
+                                        </form>
+                                    </div>
+                                </td>
+                            </tr>
+                        @endforeach
                     </tbody>
                 </table>
             </div>
