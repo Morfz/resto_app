@@ -3,8 +3,11 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\TableStoreRequest;
 use Illuminate\Http\Request;
 use App\Models\Table;
+use App\Enums\TableStatus;
+use Illuminate\Console\View\Components\Task;
 
 class TableController extends Controller
 {
@@ -28,9 +31,15 @@ class TableController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(TableStoreRequest $request)
     {
-        //
+        Table::create([
+            'name' => $request->name,
+            'capacity' => $request->capacity,
+            'status' => $request->status,
+        ]);
+
+        return to_route('admin.tables.index');
     }
 
     /**
@@ -44,24 +53,37 @@ class TableController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Table $table)
     {
-        //
+        return view('admin.tables.edit', compact('table'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(TableStoreRequest $request, Table $table)
     {
-        //
+        request()->validate([
+            'name' => 'required',
+            'capacity' => 'required',
+            'status' => 'required',
+        ]);
+
+        $table->update([
+            'name' => $request->name,
+            'capacity' => $request->capacity,
+            'status' => $request->status,
+        ]);
+
+        return to_route('admin.tables.index');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Table $table)
     {
-        //
+        $table->delete();
+        return to_route('admin.tables.index')->with('success', 'Table deleted successfully');
     }
 }
