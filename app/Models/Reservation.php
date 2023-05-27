@@ -17,9 +17,9 @@ class Reservation extends Model
         'guests',
         'table_id',
     ];
-
-    protected $dates = [
-        'date'
+    
+    protected $casts = [
+        'date' => 'datetime'
     ];
 
     public function table()
