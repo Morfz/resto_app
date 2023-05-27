@@ -19,4 +19,9 @@ class Table extends Model
     protected $casts = [
         'status' => TableStatus::class
     ];
+
+    public function reservation()
+    {
+        return $this->hasMany(Reservation::class);
+    }
 }

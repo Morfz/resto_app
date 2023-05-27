@@ -30,7 +30,7 @@
                                 Guests
                             </th>
                             <th scope="col" class="px-6 py-3">
-                                Table_id
+                                Table
                             </th>
                             <th scope="col" class="px-6 py-3">
                                 Action
@@ -56,7 +56,7 @@
                                     {{ $reservation->guests }}
                                 </td>
                                 <td class="px-6 py-4 text-gray-500 whitespace-nowrap">
-                                    {{ $reservation->table_id }}
+                                    {{ $reservation->table->name }}
                                 </td>
                                 <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
                                     <div class="flex space-x-2">
