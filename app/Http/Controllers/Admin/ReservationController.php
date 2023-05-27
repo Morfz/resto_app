@@ -39,6 +39,12 @@ class ReservationController extends Controller
         if ($request->guests > $table->capacity) {
             return back()->with('warning', 'Guests are more than table capacity');
         }
+        $request_date = Carbon::parse($request->date);
+        foreach ($table->reservation as $res) {
+            if (($res->date)->format('Y-m-d') == $request_date->format('Y-m-d')) {
+                return back()->with('warning', 'This table is reserved for this date.');
+            }
+        }
         
         Reservation::create($request->validated());
 
