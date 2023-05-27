@@ -62,17 +62,48 @@ class ReservationController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Reservation $reservation)
     {
-        //
+        $tables = Table::where('status', TableStatus::Available)->get();
+        return view('admin.reservations.edit', compact('reservation', 'tables'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(ReservationStoreRequest $request, Reservation $reservation)
     {
-        //
+        $table = Table::findOrfail($request->table_id);
+        if ($request->guests > $table->capacity) {
+            return back()->with('warning', 'Guests are more than table capacity');
+        }
+        $request_date = Carbon::parse($request->date);
+        $reservation = $table->reservation()->where('id', '!=', $reservation->id)->get();
+        foreach ($reservation as $res) {
+            if (($res->date)->format('Y-m-d') == $request_date->format('Y-m-d')) {
+                return back()->with('warning', 'This table is reserved for this date.');
+            }
+        }
+        
+        request()->validate([
+            'name' => 'required',
+            'email' => 'required',
+            'phone' => 'required',
+            'date' => 'required',
+            'guests' => 'required',
+        ]);
+
+        $table->update([
+            'name' => $request->name,
+            'email' => $request->email,
+            'phone' => $request->phone,
+            'date' => $request->date,
+            'guests' => $request->guests,
+        ]);
+
+        // $reservation->update($request->validated());
+
+        return to_route('admin.reservations.index')->with('success', 'Reservation updated successfully');
     }
 
     /**
