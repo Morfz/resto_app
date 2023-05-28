@@ -85,23 +85,24 @@ class ReservationController extends Controller
             }
         }
         
-        request()->validate([
-            'name' => 'required',
-            'email' => 'required',
-            'phone' => 'required',
-            'date' => 'required',
-            'guests' => 'required',
-        ]);
+        // request()->validate([
+        //     'name' => 'required',
+        //     'email' => 'required',
+        //     'phone' => 'required',
+        //     'date' => 'required',
+        //     'guests' => 'required',
+        // ]);
 
-        $table->update([
-            'name' => $request->name,
-            'email' => $request->email,
-            'phone' => $request->phone,
-            'date' => $request->date,
-            'guests' => $request->guests,
-        ]);
+        // $reservation->update([
+        //     'name' => $request->name,
+        //     'email' => $request->email,
+        //     'phone' => $request->phone,
+        //     'date' => $request->date,
+        //     'guests' => $request->guests,
+        // ]);
 
-        // $reservation->update($request->validated());
+        $reservation->toQuery()->update($request->validated());
+        // $this->arrested->toQuery()->update($validatedData);
 
         return to_route('admin.reservations.index')->with('success', 'Reservation updated successfully');
     }
