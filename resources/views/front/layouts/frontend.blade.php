@@ -297,6 +297,8 @@
                                 <select name="person" class="input-field" required>
                                     <option value="1-Person">1 Orang</option>
                                     <option value="2-Person">2 Orang</option>
+                                    <option value="1-Person">3 Orang</option>
+                                    <option value="2-Person">4 Orang</option>
                                 </select>
                                 <ion-icon name="chevron-down-outline"></ion-icon>
                             </span>
