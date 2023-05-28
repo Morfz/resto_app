@@ -6,5 +6,8 @@ use Illuminate\Http\Request;
 
 class FrontendController extends Controller
 {
-    //return view('front.layouts.frontend');
+    public function index()
+    {
+        return view('front.layouts.frontend');
+    }
 }
