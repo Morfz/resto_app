@@ -519,7 +519,7 @@
                 <a href="https://www.google.com/maps" target="_blank">Google Maps</a>
             </div>
             <p class="credits">© 2023 Warung Banjar. All Rights Reserved ~ by <a
-                    href="https://github.com/Morfz/warung-banjar.git" target="_blank">Kelompok 2</a></p>
+                    href="https://github.com/Morfz/resto_app.git" target="_blank">Kelompok 2</a></p>
         </footer>
     </div>
 
