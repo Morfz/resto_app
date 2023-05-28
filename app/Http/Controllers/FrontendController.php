@@ -6,5 +6,5 @@ use Illuminate\Http\Request;
 
 class FrontendController extends Controller
 {
-    // return view('front.layouts.frontend');
+    //return view('front.layouts.frontend');
 }
