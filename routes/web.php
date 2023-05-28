@@ -13,6 +13,7 @@ use App\Http\Controllers\FrontendController;
 //     return view('welcome');
 // });
 Route::get('/', [FrontendController::class, 'index']);
+Route::get('/menu', [FrontendController::class, 'menu']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');

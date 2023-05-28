@@ -8,6 +8,10 @@ class FrontendController extends Controller
 {
     public function index()
     {
-        return view('front.layouts.frontend');
+        return view('front.layouts.home');
+    }
+    public function menu()
+    {
+        return view('front.layouts.menu');
     }
 }
