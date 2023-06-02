@@ -48,23 +48,23 @@
                     <div class="topbar-section">
                         <div class="topbar__item">
                             <ion-icon name="location-outline"></ion-icon>
-                            <p>Restaurant St, Delicious City, London 9578, UK</p>
+                            <p>Jl. Unlam, Pangeran, Kec. Banjarmasin Utara, Kota Banjarmasin, Kalimantan Selatan 70123</p>
                         </div>
                         <div class="separator"></div>
                         <div class="topbar__item">
                             <ion-icon name="time-outline"></ion-icon>
-                            <p>Daily: 8.00 am to 10.00 pm</p>
+                            <p>Monday to Saturday 08.00 am - 10.00pm</p>
                         </div>
                     </div>
                     <div class="topbar-section">
                         <div class="topbar__item">
                             <ion-icon name="call-outline"></ion-icon>
-                            <p>+1 123 456 7890</p>
+                            <p>+62 812 3456 7890</p>
                         </div>
                         <div class="separator"></div>
                         <div class="topbar__item">
                             <ion-icon name="mail-outline"></ion-icon>
-                            <p>booking@restaurant.com</p>
+                            <p>warungbanjar@gmail.com</p>
                         </div>
                     </div>
                 </div>
@@ -79,7 +79,7 @@
                             {{ __('Home') }}
                         </x-nav-link>
                         <x-nav-link :href="route('menus.index')" :active="request()->routeIs('menus.index')">
-                            {{ __('Menus') }}
+                            {{ __('Menu') }}
                         </x-nav-link>
                         <x-nav-link :href="route('about.index')" :active="request()->routeIs('about.index')">
                             {{ __('About Us') }}

@@ -1,4 +1,7 @@
 <x-guest-layout>
+    <div class="back-top" title="Go to top">
+        <ion-icon name="caret-up-outline"></ion-icon>
+    </div>
     <section class="testi padding-2" id="contact">
         <h2 class="section-title"><span>”</span>I wanted to thank you for inviting me down for that amazing dinner
             the other night. The food was extraordinary.</h2>

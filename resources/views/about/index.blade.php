@@ -1,4 +1,7 @@
 <x-guest-layout>
+    <div class="back-top" title="Go to top">
+        <ion-icon name="caret-up-outline"></ion-icon>
+    </div>
     <section class="about padding-2" id="about">
         <div class="about__info">
             <h3 class="subtitle">Our Story</h3>
