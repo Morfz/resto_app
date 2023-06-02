@@ -13,7 +13,7 @@ use App\Http\Controllers\Frontend\WelcomeController;
 use App\Http\Controllers\Frontend\AboutController as FrontendAboutController;
 use App\Http\Controllers\Frontend\ContactController as FrontendContactController;
 
-Route::get('/', [WelcomeController::class, 'index']);
+Route::get('/', [WelcomeController::class, 'index'])->name('welcome');
 Route::get('/menus', [FrontendMenuController::class, 'index'])->name('menus.index');
 Route::get('/about', [FrontendAboutController::class, 'index'])->name('about.index');
 Route::get('/contact', [FrontendContactController::class, 'index'])->name('contact.index');

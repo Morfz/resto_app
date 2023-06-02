@@ -75,10 +75,18 @@
                 <nav class="padding-2 over-slider">
                     <img src="./img/logo.svg" width="160" height="50" alt="Grilli Logo">
                     <div class="nav__items">
-                        <a href="/" class="nav-items--active">Home</a>
-                        <a href="{{ route('menus.index') }}">Menus</a>
-                        <a href="{{ route('about.index') }}">About Us</a>
-                        <a href="{{ route('contact.index') }}">Contact</a>
+                        <x-nav-link :href="route('welcome')" :active="request()->routeIs('welcome')">
+                            {{ __('Home') }}
+                        </x-nav-link>
+                        <x-nav-link :href="route('menus.index')" :active="request()->routeIs('menus.index')">
+                            {{ __('Menus') }}
+                        </x-nav-link>
+                        <x-nav-link :href="route('about.index')" :active="request()->routeIs('about.index')">
+                            {{ __('About Us') }}
+                        </x-nav-link>
+                        <x-nav-link :href="route('contact.index')" :active="request()->routeIs('contact.index')">
+                            {{ __('Contact') }}
+                        </x-nav-link>
                     </div>
                     <div class="nav-right">
                         <button class="btn btn-secondary" data-text="Come on!" onclick="window.location.href='{{ route('reservations.step.one') }}'">
