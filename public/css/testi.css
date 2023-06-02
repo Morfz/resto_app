@@ -153,11 +153,6 @@ section.reservation {
     gap: 20px;
 }
 
-.reservation .inputs div:nth-child(2) {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-}
-
 .input-field {
     width: 100%;
     padding: 15px;

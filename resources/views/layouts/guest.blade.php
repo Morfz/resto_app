@@ -77,9 +77,8 @@
                     <div class="nav__items">
                         <a href="/" class="nav-items--active">Home</a>
                         <a href="{{ route('menus.index') }}">Menus</a>
-                        <a href="#about">About Us</a>
-                        <a href="#chefs">Our Chefs</a>
-                        <a href="#contact">Contact</a>
+                        <a href="{{ route('about.index') }}">About Us</a>
+                        <a href="{{ route('contact.index') }}">Contact</a>
                     </div>
                     <div class="nav-right">
                         <button class="btn btn-secondary" data-text="Come on!" onclick="window.location.href='{{ route('reservations.step.one') }}'">

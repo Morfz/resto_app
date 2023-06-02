@@ -40,7 +40,7 @@
                 door.</p>
             <h3 class="highlight">Book Through Call</h3>
             <strong>+80 (400) 123 4567</strong>
-            <button class="btn" data-text="Read more">
+            <button class="btn" data-text="Read more" onclick="window.location.href='{{ route('about.index') }}'">
                 <span>Read more</span>
             </button>
         </div>
@@ -72,7 +72,7 @@
                 <span>Hapus Ato Tidak</span>
                 <span>Rp{{ $randomMenu->price }}</span>
             </div>
-            <button class="btn" data-text="View All Menu">
+            <button class="btn" data-text="View All Menu" onclick="window.location.href='{{ route('menus.index') }}'">
                 <span>View All Menu</span>
             </button>
         </div>
@@ -101,7 +101,7 @@
             @endforeach
         </div>
 
-        <button class="btn over-slider" data-text="View All Menu">
+        <button class="btn over-slider" data-text="View All Menu" onclick="window.location.href='{{ route('menus.index') }}'">
             <span>View All Menu</span>
         </button>
 
