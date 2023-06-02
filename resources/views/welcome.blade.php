@@ -13,27 +13,15 @@
         <p class="paragraph">The best social network is a table full of good food and surrounded by people you love.
             We cook with love so you can eat with a conscience.</p>
         <div class="services-box">
-            <div class="service">
-                <picture>
-                    <img src="./img/service-1.jpg" alt="Breakfast">
-                </picture>
-                <h2>Breakfast</h2>
-                <button>View Menu</button>
-            </div>
-            <div class="service">
-                <picture>
-                    <img src="./img/service-2.jpg" alt="Breakfast">
-                </picture>
-                <h2>Appetizers</h2>
-                <button>View Menu</button>
-            </div>
-            <div class="service">
-                <picture>
-                    <img src="./img/service-3.jpg" alt="Breakfast">
-                </picture>
-                <h2>Drinks</h2>
-                <button>View Menu</button>
-            </div>
+            @foreach ($categories as $category)
+                <div class="service">
+                    <picture>
+                        <img src="{{ Storage::url($category->image) }}">
+                    </picture>
+                    <h2>{{ $category->name }}</h2>
+                    <button onclick="window.location.href='{{ route('menus.index') }}'">View Menu</button>
+                </div>
+            @endforeach
         </div>
     </section>
 
@@ -73,18 +61,16 @@
     -->
     <section class="special-dish">
         <div class="special__image">
-            <img src="./img/special-dish-banner.jpg" alt="Special dish banner">
+            <img src="{{ Storage::url($randomMenu->image) }}" alt="Special dish banner">
         </div>
         <div class="special__info">
             <img src="./img/badge-1.png" alt="Badge">
             <h2 class="subtitle">Special Dish</h2>
-            <h1 class="section-title">Lobster Tortellini</h1>
-            <p class="paragraph">This is another dish that will amaze you from the first bite, we present the
-                Lobster Tortellini that integrates the most special and unique flavors of the house. We elaborate a
-                versatile dish with a subtle yet aesthetic innovation.</p>
+            <h1 class="section-title">{{ $randomMenu->name }}</h1>
+            <p class="paragraph">{{ $randomMenu->description }}</p>
             <div class="price">
-                <span>$40.00</span>
-                <span>$20.00</span>
+                <span>Hapus Ato Tidak</span>
+                <span>Rp{{ $randomMenu->price }}</span>
             </div>
             <button class="btn" data-text="View All Menu">
                 <span>View All Menu</span>
@@ -99,9 +85,22 @@
     <section class="menu padding-2" id="menu">
         <h3 class="subtitle over-slider">Special Selection</h3>
         <h2 class="section-title over-slider">Delicious Menu</h2>
-        <div class="menu-box over-slider"></div>
+        <div class="menu-box over-slider">
+            @foreach ($specials->menus as $menu)
+                <div class="menu-item">
+                    <img src="{{ Storage::url($menu->image) }}">
+                    <div class="menu__info">
+                        <div class="menu__info-top">
+                            <h2>{{ $menu->name }}</h2>
+                            <span></span>
+                            <h3>Rp{{ $menu->price }}</h3>
+                        </div>
+                        <p>{{ $menu->description }}</p>
+                    </div>
+                </div>
+            @endforeach
+        </div>
 
-        <p class="winter over-slider">**During winter daily from <b>7:00 pm</b> to <b>9:00 pm</b></p>
         <button class="btn over-slider" data-text="View All Menu">
             <span>View All Menu</span>
         </button>

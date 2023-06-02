@@ -8,6 +8,8 @@
         <title>{{ config('app.name', 'Laravel') }}</title>
 
         <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.bunny.net">
+        <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Forum&display=swap" rel="stylesheet">
 
         <!-- Images -->
@@ -32,7 +34,6 @@
         <script defer src="./js/app.js"></script>
 
         <!-- Scripts -->
-        
     </head>
     <body style="height: 100vh; overflow-y: scroll;">
         <div class="container" id="home" >
@@ -74,15 +75,15 @@
                 <nav class="padding-2 over-slider">
                     <img src="./img/logo.svg" width="160" height="50" alt="Grilli Logo">
                     <div class="nav__items">
-                        <a href="#home" class="nav-items--active">Home</a>
-                        <a href="#menu">Menus</a>
+                        <a href="/" class="nav-items--active">Home</a>
+                        <a href="{{ route('menus.index') }}">Menus</a>
                         <a href="#about">About Us</a>
                         <a href="#chefs">Our Chefs</a>
                         <a href="#contact">Contact</a>
                     </div>
                     <div class="nav-right">
-                        <button class="btn btn-secondary" data-text="Come on!">
-                            <span>Find a table</span>
+                        <button class="btn btn-secondary" data-text="Come on!" onclick="window.location.href='{{ route('reservations.step.one') }}'">
+                            <span>Make Reservation</span>
                         </button>
                         <div class="aside-open">
                             <span></span><span></span><span></span>
