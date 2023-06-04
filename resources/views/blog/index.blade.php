@@ -2,7 +2,7 @@
     <div class="back-top" title="Go to top">
         <ion-icon name="caret-up-outline"></ion-icon>
     </div>
-    <section class="updates padding-5">
+    <section class="updates padding-2" id="blog">
         <h3 class="subtitle">Recent Updates</h3>
         <h2 class="section-title">Upcoming Event</h2>
         <div class="updates-box">
