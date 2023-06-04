@@ -327,7 +327,7 @@
     <!-- 
         STRENGTH
     -->
-    <section class="strength padding-2">
+    <!-- <section class="strength padding-2">
         <h3 class="subtitle">Why Choose Us</h3>
         <h2 class="section-title">Our Strength</h2>
         <div class="strength-box">
@@ -352,13 +352,13 @@
                 <p>Lorem Ipsum is simply dummy printing and typesetting.</p>
             </div>
         </div>
-    </section>
+    </section> -->
 
 
     <!-- 
         UPDATES
     -->
-    <section class="updates padding-5">
+    <!-- <section class="updates padding-5">
         <h3 class="subtitle">Recent Updates</h3>
         <h2 class="section-title">Upcoming Event</h2>
         <div class="updates-box">
@@ -384,5 +384,5 @@
         <button class="btn" data-text="You'll love it">
             <span>View Our Blog</span>
         </button>
-    </section>
+    </section> -->
 </x-guest-layout>
