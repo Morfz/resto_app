@@ -149,9 +149,6 @@
                                 <option value="2-Person">2 Person</option>
                                 <option value="3-Person">3 Person</option>
                                 <option value="4-Person">4 Person</option>
-                                <option value="5-Person">5 Person</option>
-                                <option value="6-Person">6 Person</option>
-                                <option value="7-Person">7 Person</option>
                             </select>
                             <ion-icon name="chevron-down-outline"></ion-icon>
                         </span>
@@ -185,7 +182,7 @@
                 </button>
             </form>
 
-            <div class="reservation-right">
+            <!-- <div class="reservation-right">
                 <h2 class="section-title">Contact Us</h2>
                 <h3 class="highlight">Booking Request</h3>
                 <strong>+88-123-123456</strong>
@@ -196,7 +193,133 @@
                 <p>Monday to Sunday 11.00 am - 2.30pm</p>
                 <h3>Dinner Time</h3>
                 <p>Monday to Sunday 05.00 pm - 10.00pm</p>
-            </div>
+            </div> -->
+                <div class="reservation-right">
+                    <h2 class="section-title">Pesan Meja</h2>
+                    <div class="scrolltable">
+                        <table cellspacing="15" cellpadding="0">
+                            <tbody>
+                                <tr>
+                                    <th>
+                                        <button class="btn over-slider" data-text="1a">
+                                            <span>1a</span>
+                                        </button>
+                                    </th>
+                                    <th></th>
+                                    <th>
+                                        <button class="btn over-slider" data-text="2a">
+                                            <span>2a</span>
+                                        </button>
+                                    </th>
+                                    <th></th>
+                                    <th>
+                                        <button class="btn over-slider" data-text="3a">
+                                            <span>3a</span>
+                                        </button>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <button class="btn over-slider" data-text="1b">
+                                            <span>1b</span>
+                                        </button>
+                                    </th>
+                                    <th></th>
+                                    <th>
+                                        <button class="btn over-slider" data-text="2b">
+                                            <span>2b</span>
+                                        </button>
+                                    </th>
+                                    <th></th>
+                                    <th>
+                                        <button class="btn over-slider" data-text="3b">
+                                            <span>3b</span>
+                                        </button>
+                                    </th>
+                                </tr>
+                                <th></th>
+                                <tr>
+                                    <th>
+                                        <button class="btn over-slider" data-text="4a">
+                                            <span>4a</span>
+                                        </button>
+                                    </th>
+                                    <th></th>
+                                    <th>
+                                        <button class="btn over-slider" data-text="5a">
+                                            <span>5a</span>
+                                        </button>
+                                    </th>
+                                    <th></th>
+                                    <th>
+                                        <button class="btn over-slider" data-text="6a">
+                                            <span>6a</span>
+                                        </button>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <button class="btn over-slider" data-text="4b">
+                                            <span>4b</span>
+                                        </button>
+                                    </th>
+                                    <th></th>
+                                    <th>
+                                        <button class="btn over-slider" data-text="5b">
+                                            <span>5b</span>
+                                        </button>
+                                    </th>
+                                    <th></th>
+                                    <th>
+                                        <button class="btn over-slider" data-text="6b">
+                                            <span>6b</span>
+                                        </button>
+                                    </th>
+                                </tr>
+                                <th></th>
+                                <tr>
+                                    <th>
+                                        <button class="btn over-slider" data-text="7a">
+                                            <span>7a</span>
+                                        </button>
+                                    </th>
+                                    <th></th>
+                                    <th>
+                                        <button class="btn over-slider" data-text="8a">
+                                            <span>8a</span>
+                                        </button>
+                                    </th>
+                                    <th></th>
+                                    <th>
+                                        <button class="btn over-slider" data-text="9a">
+                                            <span>9a</span>
+                                        </button>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <button class="btn over-slider" data-text="7b">
+                                            <span>7b</span>
+                                        </button>
+                                    </th>
+                                    <th></th>
+                                    <th>
+                                        <button class="btn over-slider" data-text="8b">
+                                            <span>8b</span>
+                                        </button>
+                                    </th>
+                                    <th></th>
+                                    <th>
+                                        <button class="btn over-slider" data-text="9b">
+                                            <span>9b</span>
+                                        </button>
+                                    </th>
+                                </tr>
+                                <th></th>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
         </section>
     </div>
 
