@@ -11,7 +11,12 @@ class WelcomeController extends Controller
     public function index()
     {
         $specials = Category::where('name', 'Menu Spesial')->first();
-        $randomMenu = $specials->menus()->inRandomOrder()->first();
+        if ($specials) {
+            $randomMenu = $specials->menus()->inRandomOrder()->first();
+            // Rest of your code
+        } else {
+            // Handle the case when the "Menu Spesial" category is not found
+        }
         $categories = Category::whereNotIn('name', ['Menu Spesial'])
             ->inRandomOrder()
             ->limit(3)
