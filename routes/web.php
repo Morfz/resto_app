@@ -17,6 +17,7 @@ Route::get('/', [WelcomeController::class, 'index'])->name('welcome');
 Route::get('/menus', [FrontendMenuController::class, 'index'])->name('menus.index');
 Route::get('/about', [FrontendAboutController::class, 'index'])->name('about.index');
 Route::get('/contact', [FrontendContactController::class, 'index'])->name('contact.index');
+Route::get('/blog', [FrontendContactController::class, 'index'])->name('blog.index');
 Route::get('/reservation/step-one', [FrontendReservationController::class, 'stepOne'])->name('reservations.step.one');
 Route::get('/reservation/step-two', [FrontendReservationController::class, 'stepTwo'])->name('reservations.step.two');
 
