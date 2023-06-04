@@ -7,17 +7,18 @@ use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\MenuController;
 use App\Http\Controllers\Admin\TableController;
 use App\Http\Controllers\Admin\ReservationController;
-use App\Http\Controllers\FrontendController;
+use App\Http\Controllers\Frontend\MenuController as FrontendMenuController;
+use App\Http\Controllers\Frontend\ReservationController as FrontendReservationController;
+use App\Http\Controllers\Frontend\WelcomeController;
+use App\Http\Controllers\Frontend\AboutController as FrontendAboutController;
+use App\Http\Controllers\Frontend\ContactController as FrontendContactController;
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-Route::get('/', [FrontendController::class, 'index']);
-Route::get('/menu', [FrontendController::class, 'menu']);
-
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/', [WelcomeController::class, 'index'])->name('welcome');
+Route::get('/menus', [FrontendMenuController::class, 'index'])->name('menus.index');
+Route::get('/about', [FrontendAboutController::class, 'index'])->name('about.index');
+Route::get('/contact', [FrontendContactController::class, 'index'])->name('contact.index');
+Route::get('/reservation/step-one', [FrontendReservationController::class, 'stepOne'])->name('reservations.step.one');
+Route::get('/reservation/step-two', [FrontendReservationController::class, 'stepTwo'])->name('reservations.step.two');
 
 Route::middleware(['auth', 'admin'])->name('admin.')->prefix('admin')->group(function () {
     Route::get('/', [AdminController::class, 'index'])->name('index');
@@ -25,6 +26,10 @@ Route::middleware(['auth', 'admin'])->name('admin.')->prefix('admin')->group(fun
     Route::resource('menus', MenuController::class);
     Route::resource('tables', TableController::class);
     Route::resource('reservations', ReservationController::class);
+});
+
+Route::middleware(['auth', 'verified'])->group(function () {
+    Route::redirect('/dashboard', '/admin')->name('dashboard');
 });
 
 Route::middleware('auth')->group(function () {

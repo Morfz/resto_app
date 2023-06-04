@@ -139,70 +139,70 @@ backTop.addEventListener('click', () => {
 /*
     MENU
 */
-let menu = [
-    {
-        dish: 'Nasi Goreng',
-        tag: 'Seasonal',
-        price: '20.000',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras fermentum diam vel ligula sodales porta.',
-    },
-    {
-        dish: 'Nasi Itik',
-        tag: '',
-        price: '20.000',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras fermentum diam vel ligula sodales porta.',
-    },
-    {
-        dish: 'Cacapan Asam',
-        tag: '',
-        price: '20.000',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras fermentum diam vel ligula sodales porta.',
-    },
-    {
-        dish: 'Ketupat Kandangan',
-        tag: 'New',
-        price: '20.000',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras fermentum diam vel ligula sodales porta.',
-    },
-    {
-        dish: 'Lontong',
-        tag: '',
-        price: '20.000',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras fermentum diam vel ligula sodales porta.',
-    },
-    {
-        dish: 'Bingka',
-        tag: '',
-        price: '20.000',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras fermentum diam vel ligula sodales porta.',
-    },
-]
+// let menu = [
+//     {
+//         dish: 'Greek Salad',
+//         tag: 'Seasonal',
+//         price: '25.50',
+//         description: 'Tomatoes, green bell pepper, sliced cucumber onion, olives, and feta cheese.',
+//     },
+//     {
+//         dish: 'Lasagne',
+//         tag: '',
+//         price: '10.00',
+//         description: 'Vegetables, cheeses, ground meats, tomato sauce, seasonings and spices.',
+//     },
+//     {
+//         dish: 'Butternut Pumpkin',
+//         tag: '',
+//         price: '32.00',
+//         description: 'Typesetting industry lorem Lorem Ipsum is simply dummy text of the priand.',
+//     },
+//     {
+//         dish: 'Tokusen Wagyu',
+//         tag: 'New',
+//         price: '40.00',
+//         description: 'Vegetables, cheeses, ground meats, tomato sauce, seasonings and spices.',
+//     },
+//     {
+//         dish: 'Olivas Rellenas',
+//         tag: '',
+//         price: '29.50',
+//         description: 'Avocados with crab meat, red onion, crab salad stuffed red bell pepper and green bell pepper.',
+//     },
+//     {
+//         dish: 'Opu Fish',
+//         tag: '',
+//         price: '45.00',
+//         description: 'Vegetables, cheeses, ground meats, tomato sauce, seasonings and spices.',
+//     },
+// ]
 
-menu.forEach((item, index) => {
-    let div = document.createElement('div');
-    div.classList.add('menu-item');
-    div.setAttribute('title', item.dish);
-    document.querySelector('.menu-box').appendChild(div);
+// menu.forEach((item, index) => {
+//     let div = document.createElement('div');
+//     div.classList.add('menu-item');
+//     div.setAttribute('title', item.dish);
+//     document.querySelector('.menu-box').appendChild(div);
 
-    div.innerHTML = `
-        <img src="./img/menu-${index+1}.png" alt="Dish">
-        <div class="menu__info">
-            <div class="menu__info-top">
-                <h2>${item.dish}</h2>
-                <span></span>
-                <h3>Rp${item.price}</h3>
-            </div>
-            <p>${item.description}</p>
-        </div>
-    `;
+//     div.innerHTML = `
+//         <img src="./img/menu-${index+1}.png" alt="Dish">
+//         <div class="menu__info">
+//             <div class="menu__info-top">
+//                 <h2>${item.dish}</h2>
+//                 <span></span>
+//                 <h3>$${item.price}</h3>
+//             </div>
+//             <p>${item.description}</p>
+//         </div>
+//     `;
 
-    if (item.tag != '') {
-        let tag = document.createElement('div');
-        tag.textContent = item.tag;
-        tag.classList.add('tag');
-        div.children[1].children[0].children[0].insertAdjacentElement('afterend', tag);
-    }
-})
+//     if (item.tag != '') {
+//         let tag = document.createElement('div');
+//         tag.textContent = item.tag;
+//         tag.classList.add('tag');
+//         div.children[1].children[0].children[0].insertAdjacentElement('afterend', tag);
+//     }
+// })
 
 
 
