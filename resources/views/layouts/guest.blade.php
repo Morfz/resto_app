@@ -87,6 +87,9 @@
                         <x-nav-link :href="route('contact.index')" :active="request()->routeIs('contact.index')">
                             {{ __('Contact') }}
                         </x-nav-link>
+                        <x-nav-link :href="route('blog.index')" :active="request()->routeIs('blog.index')">
+                            {{ __('Blog') }}
+                        </x-nav-link>
                     </div>
                     <div class="nav-right">
                         <button class="btn btn-secondary" data-text="Come on!" onclick="window.location.href='{{ route('reservations.step.one') }}'">
