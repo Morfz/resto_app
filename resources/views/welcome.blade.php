@@ -129,7 +129,7 @@
     <!--
         RESERVATION
     -->
-    <div class="container-reservation padding-2">
+    <!-- <div class="container-reservation padding-2">
         <section class="reservation">
             <form>
                 <h2 class="section-title">Online Reservation</h2>
@@ -182,7 +182,7 @@
                 </button>
             </form>
 
-            <!-- <div class="reservation-right">
+            <div class="reservation-right">
                 <h2 class="section-title">Contact Us</h2>
                 <h3 class="highlight">Booking Request</h3>
                 <strong>+88-123-123456</strong>
@@ -193,7 +193,7 @@
                 <p>Monday to Sunday 11.00 am - 2.30pm</p>
                 <h3>Dinner Time</h3>
                 <p>Monday to Sunday 05.00 pm - 10.00pm</p>
-            </div> -->
+            </div>
                 <div class="reservation-right">
                     <h2 class="section-title">Pesan Meja</h2>
                     <div class="scrolltable">
@@ -321,7 +321,7 @@
                     </div>
                 </div>
         </section>
-    </div>
+    </div> -->
 
 
     <!-- 
