@@ -20,16 +20,16 @@ Route::get('/contact', [FrontendContactController::class, 'index'])->name('conta
 Route::get('/reservation/step-one', [FrontendReservationController::class, 'stepOne'])->name('reservations.step.one');
 Route::get('/reservation/step-two', [FrontendReservationController::class, 'stepTwo'])->name('reservations.step.two');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
-
 Route::middleware(['auth', 'admin'])->name('admin.')->prefix('admin')->group(function () {
     Route::get('/', [AdminController::class, 'index'])->name('index');
     Route::resource('categories', CategoryController::class);
     Route::resource('menus', MenuController::class);
     Route::resource('tables', TableController::class);
     Route::resource('reservations', ReservationController::class);
+});
+
+Route::middleware(['auth', 'verified'])->group(function () {
+    Route::redirect('/dashboard', '/admin')->name('dashboard');
 });
 
 Route::middleware('auth')->group(function () {
