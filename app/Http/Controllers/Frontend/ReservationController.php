@@ -9,6 +9,6 @@ class ReservationController extends Controller
 {
     public function stepOne()
     {
-        return 'Reservation Step One';
+        return view('reservations.step-one');
     }
 }

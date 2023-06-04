@@ -49,6 +49,149 @@
                     </div>
                     <textarea class="input-field" cols="30" rows="7" placeholder="Message"></textarea>
                 </div>
+                <div class="reservation-right">
+                    <h2 class="section-title">Pesan Meja</h2>
+                    <div class="scrolltable">
+                        <table cellspacing="15" cellpadding="0">
+                            <tbody>
+                                <tr>
+                                    <th>
+                                        <li class="seat">
+                                            <input type="checkbox" name="seatcheckbox[]" value="Seat 1" id="1"/>
+                                            <label for="1"></label>
+                                        </li>
+                                    </th>
+                                    <th></th>
+                                    <th>
+                                        <li class="seat">
+                                            <input type="checkbox" name="seatcheckbox[]" value="Seat 1" id="1"/>
+                                            <label for="1"></label>
+                                        </li>
+                                    </th>
+                                    <th></th>
+                                    <th>
+                                        <li class="seat">
+                                            <input type="checkbox" name="seatcheckbox[]" value="Seat 1" id="1"/>
+                                            <label for="1"></label>
+                                        </li>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <li class="seat">
+                                            <input type="checkbox" name="seatcheckbox[]" value="Seat 1" id="1"/>
+                                            <label for="1"></label>
+                                        </li>
+                                    </th>
+                                    <th></th>
+                                    <th>
+                                        <li class="seat">
+                                            <input type="checkbox" name="seatcheckbox[]" value="Seat 1" id="1"/>
+                                            <label for="1"></label>
+                                        </li>
+                                    </th>
+                                    <th></th>
+                                    <th>
+                                        <li class="seat">
+                                            <input type="checkbox" name="seatcheckbox[]" value="Seat 1" id="1"/>
+                                            <label for="1"></label>
+                                        </li>
+                                    </th>
+                                </tr>
+                                <th></th>
+                                <tr>
+                                    <th>
+                                        <li class="seat">
+                                            <input type="checkbox" name="seatcheckbox[]" value="Seat 1" id="1"/>
+                                            <label for="1"></label>
+                                        </li>
+                                    </th>
+                                    <th></th>
+                                    <th>
+                                        <li class="seat">
+                                            <input type="checkbox" name="seatcheckbox[]" value="Seat 1" id="1"/>
+                                            <label for="1"></label>
+                                        </li>
+                                    </th>
+                                    <th></th>
+                                    <th>
+                                        <li class="seat">
+                                            <input type="checkbox" name="seatcheckbox[]" value="Seat 1" id="1"/>
+                                            <label for="1"></label>
+                                        </li>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <li class="seat">
+                                            <input type="checkbox" name="seatcheckbox[]" value="Seat 1" id="1"/>
+                                            <label for="1"></label>
+                                        </li>
+                                    </th>
+                                    <th></th>
+                                    <th>
+                                        <li class="seat">
+                                            <input type="checkbox" name="seatcheckbox[]" value="Seat 1" id="1"/>
+                                            <label for="1"></label>
+                                        </li>
+                                    </th>
+                                    <th></th>
+                                    <th>
+                                        <li class="seat">
+                                            <input type="checkbox" name="seatcheckbox[]" value="Seat 1" id="1"/>
+                                            <label for="1"></label>
+                                        </li>
+                                    </th>
+                                </tr>
+                                <th></th>
+                                <tr>
+                                    <th>
+                                        <li class="seat">
+                                            <input type="checkbox" name="seatcheckbox[]" value="Seat 1" id="1"/>
+                                            <label for="1"></label>
+                                        </li>
+                                    </th>
+                                    <th></th>
+                                    <th>
+                                        <li class="seat">
+                                            <input type="checkbox" name="seatcheckbox[]" value="Seat 1" id="1"/>
+                                            <label for="1"></label>
+                                        </li>
+                                    </th>
+                                    <th></th>
+                                    <th>
+                                        <li class="seat">
+                                            <input type="checkbox" name="seatcheckbox[]" value="Seat 1" id="1"/>
+                                            <label for="1"></label>
+                                        </li>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <li class="seat">
+                                            <input type="checkbox" name="seatcheckbox[]" value="Seat 1" id="1"/>
+                                            <label for="1"></label>
+                                        </li>
+                                    </th>
+                                    <th></th>
+                                    <th>
+                                        <li class="seat">
+                                            <input type="checkbox" name="seatcheckbox[]" value="Seat 1" id="1"/>
+                                            <label for="1"></label>
+                                        </li>
+                                    </th>
+                                    <th></th>
+                                    <th>
+                                        <li class="seat">
+                                            <input type="checkbox" name="seatcheckbox[]" value="Seat 1" id="1"/>
+                                            <label for="1"></label>
+                                        </li>
+                                    </th>
+                                </tr>
+                                <th></th>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
                 <button class="btn btn-secondary" data-text="Know you will enjoy it">
                     <span>Book A Table</span>
                 </button>
@@ -66,131 +209,5 @@
                 <h3>Dinner Time</h3>
                 <p>Monday to Sunday 05.00 pm - 10.00pm</p>
             </div>
-                <div class="reservation-right">
-                    <h2 class="section-title">Pesan Meja</h2>
-                    <div class="scrolltable">
-                        <table cellspacing="15" cellpadding="0">
-                            <tbody>
-                                <tr>
-                                    <th>
-                                        <button class="btn over-slider" data-text="1a">
-                                            <span>1a</span>
-                                        </button>
-                                    </th>
-                                    <th></th>
-                                    <th>
-                                        <button class="btn over-slider" data-text="2a">
-                                            <span>2a</span>
-                                        </button>
-                                    </th>
-                                    <th></th>
-                                    <th>
-                                        <button class="btn over-slider" data-text="3a">
-                                            <span>3a</span>
-                                        </button>
-                                    </th>
-                                </tr>
-                                <tr>
-                                    <th>
-                                        <button class="btn over-slider" data-text="1b">
-                                            <span>1b</span>
-                                        </button>
-                                    </th>
-                                    <th></th>
-                                    <th>
-                                        <button class="btn over-slider" data-text="2b">
-                                            <span>2b</span>
-                                        </button>
-                                    </th>
-                                    <th></th>
-                                    <th>
-                                        <button class="btn over-slider" data-text="3b">
-                                            <span>3b</span>
-                                        </button>
-                                    </th>
-                                </tr>
-                                <th></th>
-                                <tr>
-                                    <th>
-                                        <button class="btn over-slider" data-text="4a">
-                                            <span>4a</span>
-                                        </button>
-                                    </th>
-                                    <th></th>
-                                    <th>
-                                        <button class="btn over-slider" data-text="5a">
-                                            <span>5a</span>
-                                        </button>
-                                    </th>
-                                    <th></th>
-                                    <th>
-                                        <button class="btn over-slider" data-text="6a">
-                                            <span>6a</span>
-                                        </button>
-                                    </th>
-                                </tr>
-                                <tr>
-                                    <th>
-                                        <button class="btn over-slider" data-text="4b">
-                                            <span>4b</span>
-                                        </button>
-                                    </th>
-                                    <th></th>
-                                    <th>
-                                        <button class="btn over-slider" data-text="5b">
-                                            <span>5b</span>
-                                        </button>
-                                    </th>
-                                    <th></th>
-                                    <th>
-                                        <button class="btn over-slider" data-text="6b">
-                                            <span>6b</span>
-                                        </button>
-                                    </th>
-                                </tr>
-                                <th></th>
-                                <tr>
-                                    <th>
-                                        <button class="btn over-slider" data-text="7a">
-                                            <span>7a</span>
-                                        </button>
-                                    </th>
-                                    <th></th>
-                                    <th>
-                                        <button class="btn over-slider" data-text="8a">
-                                            <span>8a</span>
-                                        </button>
-                                    </th>
-                                    <th></th>
-                                    <th>
-                                        <button class="btn over-slider" data-text="9a">
-                                            <span>9a</span>
-                                        </button>
-                                    </th>
-                                </tr>
-                                <tr>
-                                    <th>
-                                        <button class="btn over-slider" data-text="7b">
-                                            <span>7b</span>
-                                        </button>
-                                    </th>
-                                    <th></th>
-                                    <th>
-                                        <button class="btn over-slider" data-text="8b">
-                                            <span>8b</span>
-                                        </button>
-                                    </th>
-                                    <th></th>
-                                    <th>
-                                        <button class="btn over-slider" data-text="9b">
-                                            <span>9b</span>
-                                        </button>
-                                    </th>
-                                </tr>
-                                <th></th>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
         </section>
 </x-guest-layout>
