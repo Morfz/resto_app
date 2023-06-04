@@ -76,7 +76,28 @@ class ReservationController extends Controller
      */
     public function update(ReservationStoreRequest $request, Reservation $reservation)
     {
-        // ??
+        $table = Table::findOrFail($request->table_id);
+
+        if ($request->guests > $table->capacity) {
+            return back()->with('warning', 'Guests are more than table capacity');
+        }
+
+        $request_date = Carbon::parse($request->date);
+
+        foreach ($table->reservation as $res) {
+            if ($res->id !== $reservation->id) {
+                $time_start = Carbon::parse($res->date->format('Y-m-d H:i:s'));
+                $time_end = Carbon::parse($res->date->format('Y-m-d H:i:s'))->addHour();
+
+                if ($request_date->between($time_start, $time_end) || $request_date->eq($time_start) || $request_date->eq($time_end)) {
+                    return back()->with('warning', 'This table is reserved for this date.');
+                }
+            }
+        }
+
+        $reservation->update($request->validated());
+
+        return redirect()->route('admin.reservations.index')->with('success', 'Reservation updated successfully');
     }
 
     /**
