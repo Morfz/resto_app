@@ -25,7 +25,7 @@
         <div class="menu-box over-slider">
             @foreach ($makananUtama->menus as $menu)
                 <div class="menu-item">
-                    <img src="{{ Storage::url($menu->image) }}">
+                    <img src="{{ asset('storage/' . $menu->image) }}">
                     <div class="menu__info">
                         <div class="menu__info-top">
                             <h2>{{ $menu->name }}</h2>
