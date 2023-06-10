@@ -29,6 +29,7 @@
         <link rel="stylesheet" href="./css/testi.css">
         <link rel="stylesheet" href="./css/strength.css">
         <link rel="stylesheet" href="./css/footer.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
         <style>
         /* CSS untuk tampilan modal */
         .modal {
@@ -40,15 +41,48 @@
             width: 100%;
             height: 100%;
             overflow: auto;
-            background-color: rgba(0, 0, 0, 0.5);
+            background-color: rgba(0, 0, 0, 0.7);
         }
 
         .modal-content {
             background-color: #fefefe;
             margin: 15% auto;
-            padding: 20px;
-            border: 1px solid #888;
+            border: 1px solid #e4c590;
             width: 80%;
+        }
+        /* Ganti tampilan default checkbox */
+        input[type="checkbox"] {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border: 1px solid #999;
+            border-radius: 4px;
+            outline: none;
+            transition: background-color 0.3s;
+            cursor: pointer;
+        }
+
+        /* Tampilan checkbox saat di-check */
+        input[type="checkbox"]:checked {
+            background-color: #2196F3;
+        }
+
+        /* Ganti ikon checkbox dengan font awesome */
+        input[type="checkbox"] + label:before {
+            font-family: "Font Awesome 5 Free";
+            content: "\f0c8";
+            color: #999;
+            font-size: 14px;
+            display: inline-block;
+            margin-right: 5px;
+        }
+
+        /* Ganti ikon checkbox saat di-check */
+        input[type="checkbox"]:checked + label:before {
+            content: "\f14a";
+            color: #fff;
         }
         </style>
 
@@ -123,9 +157,11 @@
                             <div id="myModal" class="modal">
                                 <!-- Konten modal -->
                                 <div class="modal-content">
-                                    <span onclick="closeModal()" style="float: right; cursor: pointer;">&times;</span>
-                                        <section class="reservation">
+
+                                    <section class="reservation">
+
                                         <form>
+                                            
                                             <h2 class="section-title">Online Reservation</h2>
                                             <p class="paragraph">Booking request <a href="tel:+88123123456">+88-123-123456</a> or fill out the
                                                 order form</p>
@@ -451,7 +487,8 @@
                                             <button class="btn btn-secondary" type="submit" data-toggle="modal" data-target="#contohModal" data-text="Know you will enjoy it">
                                                 <span>Book A Table</span>
                                             </button>
-                                            <button class="btn" data-text="Come on!" onclick="closeModal()">
+                                            <br></br>
+                                            <button class="btn" data-text="Close" onclick="closeModal()">
                                                 <span>Back</span>
                                             </button>
                                         </form>
@@ -467,7 +504,13 @@
                                 function closeModal() {
                                     document.getElementById("myModal").style.display = "none";
                                 }
+                                window.onclick = function(event) {
+                                    if (event.target == modal) {
+                                        closeModal();
+                                    }
+                                };
                             </script>
+                            <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
                         </section>
                         <div class="aside-open">
                             <span></span><span></span><span></span>
