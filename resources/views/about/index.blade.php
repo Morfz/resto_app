@@ -27,4 +27,30 @@
             </picture>
         </div>
     </section>
+    <section class="strength padding-2">
+            <h3 class="subtitle">Alasan Memilih Kami</h3>
+            <h2 class="section-title">Kelebihan Kami</h2>
+            <div class="strength-box">
+                <div class="strength__item">
+                    <img src="./img/features-icon-1.png" alt="Features image">
+                    <h2>Makanan Higienis</h2>
+                    <p>Lorem Ipsum is simply dummy printing and typesetting.</p>
+                </div>
+                <div class="strength__item">
+                    <img src="./img/features-icon-2.png" alt="Features image">
+                    <h2>Lingkungan Segar</h2>
+                    <p>Lorem Ipsum is simply dummy printing and typesetting.</p>
+                </div>
+                <div class="strength__item">
+                    <img src="./img/features-icon-3.png" alt="Features image">
+                    <h2>Koki Terampil</h2>
+                    <p>Lorem Ipsum is simply dummy printing and typesetting.</p>
+                </div>
+                <div class="strength__item">
+                    <img src="./img/features-icon-4.png" alt="Features image">
+                    <h2>Acara & Pesta</h2>
+                    <p>Lorem Ipsum is simply dummy printing and typesetting.</p>
+                </div>
+            </div>
+        </section>
 </x-guest-layout>
