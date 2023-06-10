@@ -170,6 +170,7 @@
                                                     <input class="input-field" type="text" placeholder="Your Name" autocomplete="off" required>
                                                     <input class="input-field" type="tel" placeholder="Phone Number" autocomplete="off"
                                                         inputmode="numeric" required>
+                                                        <input class="input-field" type="text" placeholder="Email" autocomplete="off" required>
                                                 </div>
                                                 <div>
                                                     <span>
