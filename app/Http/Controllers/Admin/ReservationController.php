@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use App\Models\Reservation;
 use App\Models\Table;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\Storage;
 
 class ReservationController extends Controller
 {
@@ -41,7 +42,9 @@ class ReservationController extends Controller
         }
         $request_date = Carbon::parse($request->date);
         foreach ($table->reservation as $res) {
-            if (($res->date)->format('Y-m-d') == $request_date->format('Y-m-d')) {
+            $time_start = Carbon::parse($res->date->format('Y-m-d H:i:s'));
+            $time_end = Carbon::parse($res->date->format('Y-m-d H:i:s'))->addHour();
+            if (($request_date->between($time_start, $time_end)) || ($request_date->eq($time_start) || $request_date->eq($time_end))) {
                 return back()->with('warning', 'This table is reserved for this date.');
             }
         }
