@@ -35,7 +35,7 @@
                                     {{ $category->name }}
                                 </td>
                                 <td class="px-6 py-4">
-                                    <img src="{{ asset('storage/' . $category->image) }}" class="w-16 h-16 object-cover rounded">
+                                    <img src="{{ Storage::url($category->image }}" class="w-16 h-16 object-cover rounded">
                                 </td>
                                 <td class="px-6 py-4 font-medium text-gray-900">
                                     {{ $category->description }}
