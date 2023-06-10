@@ -5,10 +5,10 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class ReservationController extends Controller
+class BlogController extends Controller
 {
-    public function stepOne()
+    public function index()
     {
-        return view('reservations.step-one');
+        return view('blog.index');
     }
 }
