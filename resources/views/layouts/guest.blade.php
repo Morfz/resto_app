@@ -149,7 +149,7 @@
                     </div>
                     <div class="nav-right">
                         <section>
-                            <button class="btn" data-text="Come on!" onclick="openModal()">
+                            <button class="btn" data-text="Come on!" onclick="window.location.href='{{ route('reservations.step.one') }}'">
                                 <span>Make Reservation</span>
                             </button>
                             <span class="overlay"></span>

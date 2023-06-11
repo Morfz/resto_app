@@ -8,9 +8,7 @@ section.strength {
     text-align: center;
 }
 
-.strength .subtitle:after {
-    left: -21%;
-}
+
 
 .strength-box {
     margin-top: 30px;
