@@ -13,22 +13,22 @@
         <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Forum&display=swap" rel="stylesheet">
 
         <!-- Images -->
-        <link rel="preload" as="image" href="./img/hero-slider-1.jpg">
-        <link rel="preload" as="image" href="./img/hero-slider-2.jpg">
-        <link rel="preload" as="image" href="./img/hero-slider-3.jpg">
-        <link rel="shortcut icon" href="./img/favicon.svg" type="image/svg+xml">
+        <link rel="stylesheet" href="{{ asset('img/hero-slider-1.jpg') }}">
+        <link rel="stylesheet" href="{{ asset('img/hero-slider-2.jpg') }}">
+        <link rel="stylesheet" href="{{ asset('img/hero-slider-3.jpg') }}">
+        <link rel="shortcut icon" href="{{ asset ('img/favicon.svg') }}" type="image/svg+xml">
 
         <!-- Styles -->
-        <link rel="stylesheet" href="./css/styles.css">
-        <link rel="stylesheet" href="./css/header.css">
-        <link rel="stylesheet" href="./css/nav.css">
-        <link rel="stylesheet" href="./css/services.css">
-        <link rel="stylesheet" href="./css/about.css">
-        <link rel="stylesheet" href="./css/special.css">
-        <link rel="stylesheet" href="./css/menu.css">
-        <link rel="stylesheet" href="./css/testi.css">
-        <link rel="stylesheet" href="./css/strength.css">
-        <link rel="stylesheet" href="./css/footer.css">
+        <link rel="stylesheet" href="{{ asset ('css/styles.css') }}">
+        <link rel="stylesheet" href="{{ asset ('css/header.css') }}">
+        <link rel="stylesheet" href="{{ asset ('css/nav.css') }}">
+        <link rel="stylesheet" href="{{ asset ('css/services.css') }}">
+        <link rel="stylesheet" href="{{ asset ('css/about.css') }}">
+        <link rel="stylesheet" href="{{ asset ('css/special.css') }}">
+        <link rel="stylesheet" href="{{ asset ('css/menu.css') }}">
+        <link rel="stylesheet" href="{{ asset ('css/testi.css') }}">
+        <link rel="stylesheet" href="{{ asset ('css/strength.css') }}">
+        <link rel="stylesheet" href="{{ asset ('css/footer.css') }}">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
         <style>
         /* CSS untuk tampilan modal */
@@ -87,7 +87,7 @@
         </style>
 
         <!-- JS -->
-        <script defer src="./js/app.js"></script>
+        <script defer src="{{ asset ('js/app.js') }}"></script>
 
         <!-- Scripts -->
     </head>
