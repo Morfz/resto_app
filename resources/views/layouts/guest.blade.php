@@ -84,6 +84,35 @@
             content: "\f14a";
             color: #fff;
         }
+        /* custom checkbox */
+        .seat label {
+            display: block;
+            position: relative;
+            width: 100%;
+            text-align: center;
+            font-size: 14px;
+            font-weight: bolder;
+            line-height: 1.5rem;
+            padding: 4px 0;
+            background: #fefefe;
+            border-radius: 5px;
+            color: black;
+        }
+        .seat label:hover {
+            cursor: pointer;
+            box-shadow: 0 0 0px 2px gold;
+        }
+        .seat input[type=checkbox] {
+            position: absolute;
+        }
+        
+        /* hide the browser's default checkbox */
+        .checkbox input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+        }
+        
         </style>
 
         <!-- JS -->
