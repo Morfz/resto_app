@@ -3,7 +3,7 @@
         <ion-icon name="caret-up-outline"></ion-icon>
     </div>
     <section class="menu padding-2" id="menu">
-        <h3 class="subtitle over-slider">Special Selection</h3>
+        <h3 class="subtitle over-slider">Pilihan Spesial</h3>
         <h2 class="section-title over-slider">Makanan Pembuka</h2>
         <div class="menu-box over-slider">
             @foreach ($makananPembuka->menus as $menu)

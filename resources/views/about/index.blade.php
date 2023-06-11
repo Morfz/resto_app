@@ -4,17 +4,16 @@
     </div>
     <section class="about padding-2" id="about">
         <div class="about__info">
-            <h3 class="subtitle">Our Story</h3>
-            <h2 class="section-title">Every Flavor Tells a Story</h2>
-            <p class="paragraph">Grilli® challenges the boundaries of cuisine by drawing its influences from the
-                culinary roots of our team members. We combine traditional and innovative techniques to create
-                unique offerings using local ingredients in all of its dishes. Grilli® is based on hospitality with
-                our staff's commitment to provide you with a memorable experience every time you walk through the
-                door.</p>
-            <h3 class="highlight">Book Through Call</h3>
+            <h3 class="subtitle">Cerita Kami</h3>
+            <h2 class="section-title">Kisah dalam Setiap Rasa</h2>
+            <p class="paragraph">Grilli® menantang batasan-batasan kuliner dengan mengambil inspirasi dari akar-akar
+                kuliner anggota tim kami. Kami menggabungkan teknik tradisional dan inovatif untuk menciptakan hidangan-hidangan
+                unik menggunakan bahan-bahan lokal. Grilli® didasarkan pada keramahan dengan komitmen staf kami untuk memberikan
+                pengalaman berkesan setiap kali Anda menginjakkan kaki di sini.</p>
+            <h3 class="highlight">Pesan Melalui Telepon</h3>
             <strong>+80 (400) 123 4567</strong>
             <button class="btn" data-text="Read more">
-                <span>Read more</span>
+                <span>Selengkapnya</span>
             </button>
         </div>
         <div class="about__image">
@@ -34,22 +33,22 @@
                 <div class="strength__item">
                     <img src="./img/features-icon-1.png" alt="Features image">
                     <h2>Makanan Higienis</h2>
-                    <p>Lorem Ipsum is simply dummy printing and typesetting.</p>
+                    <p>Makanan kami dibuat dengan standar kebersihan yang tinggi.</p>
                 </div>
                 <div class="strength__item">
                     <img src="./img/features-icon-2.png" alt="Features image">
                     <h2>Lingkungan Segar</h2>
-                    <p>Lorem Ipsum is simply dummy printing and typesetting.</p>
+                    <p>Kami menyediakan lingkungan yang segar dan nyaman bagi para pengunjung.</p>
                 </div>
                 <div class="strength__item">
                     <img src="./img/features-icon-3.png" alt="Features image">
                     <h2>Koki Terampil</h2>
-                    <p>Lorem Ipsum is simply dummy printing and typesetting.</p>
+                    <p>Koki kami sangat terampil dan berpengalaman dalam menyajikan hidangan berkualitas.</p>
                 </div>
                 <div class="strength__item">
                     <img src="./img/features-icon-4.png" alt="Features image">
                     <h2>Acara & Pesta</h2>
-                    <p>Lorem Ipsum is simply dummy printing and typesetting.</p>
+                    <p>Kami menyediakan layanan untuk acara dan pesta dengan penuh keramahan dan profesionalisme.</p>
                 </div>
             </div>
         </section>

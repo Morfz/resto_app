@@ -109,7 +109,7 @@
                         <div class="separator"></div>
                         <div class="topbar__item">
                             <ion-icon name="time-outline"></ion-icon>
-                            <p>Monday to Saturday 08.00 am - 10.00pm</p>
+                            <p>Senin s/d Sabtu 08.00 am - 10.00pm</p>
                         </div>
                     </div>
                     <div class="topbar-section">
@@ -132,16 +132,16 @@
                     <img src="./img/logo.svg" width="160" height="50" alt="Grilli Logo">
                     <div class="nav__items">
                         <x-nav-link :href="route('welcome')" :active="request()->routeIs('welcome')">
-                            {{ __('Home') }}
+                            {{ __('Beranda') }}
                         </x-nav-link>
                         <x-nav-link :href="route('menus.index')" :active="request()->routeIs('menus.index')">
                             {{ __('Menu') }}
                         </x-nav-link>
                         <x-nav-link :href="route('about.index')" :active="request()->routeIs('about.index')">
-                            {{ __('About Us') }}
+                            {{ __('Tentang') }}
                         </x-nav-link>
                         <x-nav-link :href="route('contact.index')" :active="request()->routeIs('contact.index')">
-                            {{ __('Contact') }}
+                            {{ __('Kontak') }}
                         </x-nav-link>
                         <x-nav-link :href="route('blog.index')" :active="request()->routeIs('blog.index')">
                             {{ __('Blog') }}
@@ -150,7 +150,7 @@
                     <div class="nav-right">
                         <section>
                             <button class="btn" data-text="Come on!" onclick="openModal()">
-                                <span>Make Reservation</span>
+                                <span>Buat Reservasi</span>
                             </button>
                             <span class="overlay"></span>
                             <!-- Modal -->
@@ -163,8 +163,7 @@
                                         <form>
                                             
                                             <h2 class="section-title">Online Reservation</h2>
-                                            <p class="paragraph">Booking request <a href="tel:+88123123456">+88-123-123456</a> or fill out the
-                                                order form</p>
+                                            <p class="paragraph">Permintaan reservasi <a href="tel:+88123123456">+88-123-123456</a> atau isi form order online</p>
                                             <div class="inputs">
                                                 <div>
                                                     <input class="input-field" type="text" placeholder="Your Name" autocomplete="off" required>
@@ -528,13 +527,13 @@
                     </div>
                     <img src="./img/logo.svg" width="160" height="50" alt="Grilli Logo">
                     <div class="nav__items">
-                        <a href="#home" class="nav-items--active"><span>Home</span></a>
-                        <a href="#menu"><span>Menus</span></a>
-                        <a href="#about"><span>About Us</span></a>
-                        <a href="#chefs"><span>Our Chefs</span></a>
-                        <a href="#contact"><span>Contact</span></a>
+                        <a href="#home" class="nav-items--active"><span>Beranda</span></a>
+                        <a href="#menu"><span>Menu</span></a>
+                        <a href="#about"><span>Tentang</span></a>
+                        <a href="#chefs"><span>Koki Kami</span></a>
+                        <a href="#contact"><span>Kontak</span></a>
                     </div>
-                    <h2>Visit Us</h2>
+                    <h2>Kunjungi Kami</h2>
                     <p>Restaurant St, Delicious City, London 9578, UK</p>
                     <p>Open: 9.30 am - 2.30pm</p>
                     <p>booking@grilli.com</p>
@@ -556,41 +555,39 @@
                     <div class="slider-control slider-next over-slider">
                         <ion-icon name="chevron-forward-outline"></ion-icon>
                     </div>
-
-
+                
                     <div class="slider-item">
                         <div class="slider-bg"><img src="./img/hero-slider-1.jpg"></div>
-                        <h2 reveal class="subtitle" style="--delay-item: 0">Tradational & Hygine</h2>
-                        <h1 reveal class="title" style="--delay-item: 1">For the love of delicious food</h1>
-                        <p reveal class="paragraph" style="--delay-item: 2">Come with family & feel the joy of mouthwatering
-                            food</p>
-                        <button class="btn" data-text="View Our Menu" reveal style="--delay-item: 3">
-                            <span>Taste the dish</span>
+                        <h2 reveal class="subtitle" style="--delay-item: 0">Tradisional & Higienis</h2>
+                        <h1 reveal class="title" style="--delay-item: 1">Untuk cinta pada makanan lezat</h1>
+                        <p reveal class="paragraph" style="--delay-item: 2">Datanglah bersama keluarga dan rasakan kegembiraan dari makanan yang menggugah selera</p>
+                        <button class="btn" data-text="Lihat Menu Kami" reveal style="--delay-item: 3">
+                            <span>Rasakan hidangan ini</span>
                         </button>
                     </div>
-
+                
                     <div class="slider-item">
                         <div class="slider-bg"><img src="./img/hero-slider-2.jpg"></div>
-                        <h2 reveal class="subtitle" style="--delay-item: 0">Delightful Experience</h2>
-                        <h1 reveal class="title" style="--delay-item: 1">Flavors Inspired by the Seasons</h1>
-                        <p reveal class="paragraph" style="--delay-item: 2">Come with family & feel the joy of mouthwatering
-                            food</p>
-                        <button class="btn" data-text="View Our Menu" reveal style="--delay-item: 3">
-                            <span>Taste the dish</span>
+                        <h2 reveal class="subtitle" style="--delay-item: 0">Pengalaman yang Menyenangkan</h2>
+                        <h1 reveal class="title" style="--delay-item: 1">Rasa yang Terinspirasi oleh Musim</h1>
+                        <p reveal class="paragraph" style="--delay-item: 2">Datanglah bersama keluarga dan rasakan kegembiraan dari makanan yang menggugah selera</p>
+                        <button class="btn" data-text="Lihat Menu Kami" reveal style="--delay-item: 3">
+                            <span>Rasakan hidangan ini</span>
                         </button>
                     </div>
-
+                
                     <div class="slider-item">
                         <div class="slider-bg"><img src="./img/hero-slider-3.jpg"></div>
-                        <h2 reveal class="subtitle" style="--delay-item: 0">Amazing & Delicious</h2>
-                        <h1 reveal class="title" style="--delay-item: 1">Where every flavor tells a story</h1>
-                        <p reveal class="paragraph" style="--delay-item: 2">Come with family & feel the joy of mouthwatering
-                            food</p>
-                        <button class="btn" data-text="View Our Menu" reveal style="--delay-item: 3">
-                            <span>Taste the dish</span>
+                        <h2 reveal class="subtitle" style="--delay-item: 0">Menakjubkan & Lezat</h2>
+                        <h1 reveal class="title" style="--delay-item: 1">Dimana setiap rasa bercerita</h1>
+                        <p reveal class="paragraph" style="--delay-item: 2">Datanglah bersama keluarga dan rasakan kegembiraan dari makanan yang menggugah selera</p>
+                        <button class="btn" data-text="Lihat Menu Kami" reveal style="--delay-item: 3">
+                            <span>Rasakan hidangan ini</span>
                         </button>
                     </div>
                 </header>
+
+
             </div>
 
             <div class="font-sans text-gray-900 antialiased min-h-screen" >
@@ -602,26 +599,26 @@
             -->
             <footer>
                 <div class="footer__links">
-                    <a href="#home">Home</a>
+                    <a href="#home">Beranda</a>
                     <a href="#menu">Menu</a>
-                    <a href="#about">About us</a>
-                    <a href="#chefs">Our Chefs</a>
-                    <a href="#contact">Contact</a>
+                    <a href="#about">Tentang</a>
+                    <a href="#chefs">Koki Kami</a>
+                    <a href="#contact">Kontak</a>
                 </div>
                 <div class="getInToch padding-2">
                     <img src="./img/logo.svg" alt="Grilli Logo">
-                    <p class="text">Restaurant St, Delicious City, London 9578, UK</p>
-                    <a href="mailto:booking@grilli.com" class="text">booking@grilli.com</a>
-                    <a href="tel:+88123123456" class="text">Booking Request : +88-123-123456</a>
-                    <p class="text">Open : 09:00 am - 01:00 pm</p>
+                    <p class="text">Jl. Unlam, Pangeran, Kec. Banjarmasin Utara, Kota Banjarmasin, Kalimantan Selatan 70123</p>
+                    <a href="mailto:booking@grilli.com" class="text">warungbanjar@gmail.com</a>
+                    <a href="tel:+88123123456" class="text">Pemesanan : +62 812 3456 7890</a>
+                    <p class="text">Buka : Senin s/d Sabtu 08.00 am - 10.00pm</p>
                     <div class="footer-separator"><span></span><span></span><span></span></div>
-                    <h2 class="section-title">Get News & Offers</h2>
-                    <h3>Subscribe us & Get <span>25% Off.</span></h3>
+                    <h2 class="section-title">Dapatkan Berita & Penawaran</h2>
+                    <h3>Langganan kami & Dapatkan <span>25% Diskon.</span></h3>
                     <div class="subscribe">
                         <ion-icon name="mail-outline"></ion-icon>
-                        <input type="email" inputmode="email" placeholder="Your email" maxlength="70">
+                        <input type="email" inputmode="email" placeholder="Email anda" maxlength="70">
                         <button class="btn btn-secondary" data-text="Appreciated!">
-                            <span>Subscribe</span>
+                            <span>Langganan</span>
                         </button>
                     </div>
                 </div>
