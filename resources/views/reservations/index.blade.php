@@ -26,21 +26,27 @@
                         </select>
                         <ion-icon name="chevron-down-outline"></ion-icon>
                     </span>
-                    <input class="input-field" type="datetime-local" id="date" name="date" min="{{ $min_date->format('Y-m-d H:i:s') }}" max="{{ $max_date->format('Y-m-d H:i:s') }}">
                     <span>
-                        <button class="btn btn-secondary" id="popupButton" data-text="Know you will enjoy it">
+                        <input class="input-field" type="datetime-local" id="date" name="date" min="{{ $min_date->format('Y-m-d H:i:s') }}" max="{{ $max_date->format('Y-m-d H:i:s') }}">
+                    </span>
+                    <span>
+                        <button class="btn btn-secondary" id="popupButton" data-text="Guest">
                             <span>Pilih Meja</span>
                         </button>
-                        <div id="popupContainer" style="display: none;">
-                            <!-- Konten pop-up di sini -->
-                            <ion-icon name="person-outline"></ion-icon>
-                            <select id="table_id" name="table_id" class="input-field" required>
-                                @foreach($tables as $table)
-                                    <option value="{{ $table->id }}">{{ $table->name }} ({{ $table->capacity }} Guests)</option>
-                                @endforeach
-                            </select>
-                            <ion-icon name="chevron-down-outline"></ion-icon>
-                            <button id="closeButton">Tutup Pop-up</button>
+                        <div id="popupContainer" class="modal">
+                            <div class="modal-content">
+                                <ion-icon name="person-outline"></ion-icon>
+                                <select id="table_id" name="table_id" class="input-field" required>
+                                    @foreach($tables as $table)
+                                        <option value="{{ $table->id }}">{{ $table->name }} ({{ $table->capacity }} Guests)</option>
+                                    @endforeach
+                                </select>
+                                <ion-icon name="chevron-down-outline"></ion-icon>
+                                <div class="button-container">
+                                    <button id="selectButton">Pilih</button>
+                                </div>
+                                <span id="closeButton" class="close">&times;</span>
+                            </div>
                         </div>  
                     </span>
                 </div>
@@ -50,22 +56,11 @@
             </button>
         </form>
     </section>
-    <style>
-        #popupContainer {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: #fff;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-            z-index: 9999;
-        }
-    </style>
     <script>
-        var popupButton = document.getElementById('popupButton');
-        var popupContainer = document.getElementById('popupContainer');
-        var closeButton = document.getElementById('closeButton');
+        const popupButton = document.getElementById('popupButton');
+        const popupContainer = document.getElementById('popupContainer');
+        const closeButton = document.getElementById('closeButton');
+        const selectButton = document.getElementById('selectButton');
     
         popupButton.addEventListener('click', function() {
             popupContainer.style.display = 'block';
@@ -74,6 +69,60 @@
         closeButton.addEventListener('click', function() {
             popupContainer.style.display = 'none';
         });
-    </script>        
-      
+    
+        selectButton.addEventListener('click', function() {
+            const tableSelect = document.getElementById('table_id');
+            const selectedTable = tableSelect.options[tableSelect.selectedIndex].text;
+            popupButton.querySelector('span').textContent = selectedTable;
+            popupContainer.style.display = 'none';
+        });
+    </script>
+    
+    <style>
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+        
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            position: relative;
+        }
+        
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        
+        .button-container {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 20px;
+        }
+        
+        .button-container button {
+            margin-left: 10px;
+        }
+    </style>
 </x-guest-layout>
