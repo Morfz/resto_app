@@ -22,7 +22,9 @@ Route::get('/blog', [FrontendBlogController::class, 'index'])->name('blog.index'
 Route::get('/reservation', [FrontendReservationController::class, 'index'])->name('reservations.index');
 Route::post('/reservation', [FrontendReservationController::class, 'store'])->name('reservations.store');
 Route::get('/reservation/step-one', [FrontendReservationController::class, 'stepOne'])->name('reservations.step.one');
+Route::post('/reservation/step-one', [FrontendReservationController::class, 'storeStepOne'])->name('reservations.store.step.one');
 Route::get('/reservation/step-two', [FrontendReservationController::class, 'stepTwo'])->name('reservations.step.two');
+Route::post('/reservation/step-two', [FrontendReservationController::class, 'storeStepTwo'])->name('reservations.store.step.two');
 
 Route::middleware(['auth', 'admin'])->name('admin.')->prefix('admin')->group(function () {
     Route::get('/', [AdminController::class, 'index'])->name('index');
