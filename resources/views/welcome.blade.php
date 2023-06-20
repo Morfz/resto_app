@@ -89,28 +89,31 @@
         <h3 class="subtitle over-slider">Special Selection</h3>
         <h2 class="section-title over-slider">Delicious Menu</h2>
         <div class="menu-box over-slider">
-            @foreach ($specials->menus as $menu)
-                <div class="menu-item">
-                    <img src="{{ Storage::url($menu->image) }}">
-                    <div class="menu__info">
-                        <div class="menu__info-top">
-                            <h2>{{ $menu->name }}</h2>
-                            <span></span>
-                            <h3>Rp{{ $menu->price }}</h3>
+            @if ($specials && $specials->menus->count() > 0)
+                @foreach ($specials->menus as $menu)
+                    <div class="menu-item">
+                        <img src="{{ Storage::url($menu->image) }}">
+                        <div class="menu__info">
+                            <div class="menu__info-top">
+                                <h2>{{ $menu->name }}</h2>
+                                <span></span>
+                                <h3>Rp{{ $menu->price }}</h3>
+                            </div>
+                            <p>{{ $menu->description }}</p>
                         </div>
-                        <p>{{ $menu->description }}</p>
                     </div>
-                </div>
-            @endforeach
+                @endforeach
+            @endif
         </div>
-
+    
         <button class="btn over-slider" data-text="View All Menu" onclick="window.location.href='{{ route('menus.index') }}'">
             <span>View All Menu</span>
         </button>
-
+    
         <img src="./img/shape-5.png" width="921" height="1036" loading="lazy" alt="shape" class="shape shape-2">
         <img src="./img/shape-6.png" width="700" height="800" loading="lazy" alt="shape" class="shape shape-3">
     </section>
+    
 
 
     <!-- 
