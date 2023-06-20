@@ -13,22 +13,22 @@
         <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Forum&display=swap" rel="stylesheet">
 
         <!-- Images -->
-        <link rel="preload" as="image" href="./img/hero-slider-1.jpg">
-        <link rel="preload" as="image" href="./img/hero-slider-2.jpg">
-        <link rel="preload" as="image" href="./img/hero-slider-3.jpg">
-        <link rel="shortcut icon" href="./img/favicon.svg" type="image/svg+xml">
+        <link rel="stylesheet" href="{{ asset('img/hero-slider-1.jpg') }}">
+        <link rel="stylesheet" href="{{ asset('img/hero-slider-2.jpg') }}">
+        <link rel="stylesheet" href="{{ asset('img/hero-slider-3.jpg') }}">
+        <link rel="shortcut icon" href="{{ asset ('img/favicon.svg') }}" type="image/svg+xml">
 
         <!-- Styles -->
-        <link rel="stylesheet" href="./css/styles.css">
-        <link rel="stylesheet" href="./css/header.css">
-        <link rel="stylesheet" href="./css/nav.css">
-        <link rel="stylesheet" href="./css/services.css">
-        <link rel="stylesheet" href="./css/about.css">
-        <link rel="stylesheet" href="./css/special.css">
-        <link rel="stylesheet" href="./css/menu.css">
-        <link rel="stylesheet" href="./css/testi.css">
-        <link rel="stylesheet" href="./css/strength.css">
-        <link rel="stylesheet" href="./css/footer.css">
+        <link rel="stylesheet" href="{{ asset ('css/styles.css') }}">
+        <link rel="stylesheet" href="{{ asset ('css/header.css') }}">
+        <link rel="stylesheet" href="{{ asset ('css/nav.css') }}">
+        <link rel="stylesheet" href="{{ asset ('css/services.css') }}">
+        <link rel="stylesheet" href="{{ asset ('css/about.css') }}">
+        <link rel="stylesheet" href="{{ asset ('css/special.css') }}">
+        <link rel="stylesheet" href="{{ asset ('css/menu.css') }}">
+        <link rel="stylesheet" href="{{ asset ('css/testi.css') }}">
+        <link rel="stylesheet" href="{{ asset ('css/strength.css') }}">
+        <link rel="stylesheet" href="{{ asset ('css/footer.css') }}">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
         <style>
         /* CSS untuk tampilan modal */
@@ -84,10 +84,39 @@
             content: "\f14a";
             color: #fff;
         }
+        /* custom checkbox */
+        .seat label {
+            display: block;
+            position: relative;
+            width: 100%;
+            text-align: center;
+            font-size: 14px;
+            font-weight: bolder;
+            line-height: 1.5rem;
+            padding: 4px 0;
+            background: #fefefe;
+            border-radius: 5px;
+            color: black;
+        }
+        .seat label:hover {
+            cursor: pointer;
+            box-shadow: 0 0 0px 2px gold;
+        }
+        .seat input[type=checkbox] {
+            position: absolute;
+        }
+        
+        /* hide the browser's default checkbox */
+        .checkbox input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+        }
+        
         </style>
 
         <!-- JS -->
-        <script defer src="./js/app.js"></script>
+        <script defer src="{{ asset ('js/app.js') }}"></script>
 
         <!-- Scripts -->
     </head>
