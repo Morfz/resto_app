@@ -60,23 +60,26 @@
         SPECIAL DISH 
     -->
     <section class="special-dish">
-        <div class="special__image">
-            <img src="{{ Storage::url($randomMenu->image) }}" alt="Special dish banner">
-        </div>
-        <div class="special__info">
-            <img src="./img/badge-1.png" alt="Badge">
-            <h2 class="subtitle">Special Dish</h2>
-            <h1 class="section-title">{{ $randomMenu->name }}</h1>
-            <p class="paragraph">{{ $randomMenu->description }}</p>
-            <div class="price">
-                <span>Hapus Ato Tidak</span>
-                <span>Rp{{ $randomMenu->price }}</span>
+        @if ($randomMenu)
+            <div class="special__image">
+                <img src="{{ Storage::url($randomMenu->image) }}" alt="Special dish banner">
             </div>
-            <button class="btn" data-text="View All Menu" onclick="window.location.href='{{ route('menus.index') }}'">
-                <span>View All Menu</span>
-            </button>
-        </div>
+            <div class="special__info">
+                <img src="./img/badge-1.png" alt="Badge">
+                <h2 class="subtitle">Special Dish</h2>
+                <h1 class="section-title">{{ $randomMenu->name }}</h1>
+                <p class="paragraph">{{ $randomMenu->description }}</p>
+                <div class="price">
+                    <span>Hapus Ato Tidak</span>
+                    <span>Rp{{ $randomMenu->price }}</span>
+                </div>
+                <button class="btn" data-text="View All Menu" onclick="window.location.href='{{ route('menus.index') }}'">
+                    <span>View All Menu</span>
+                </button>
+            </div>
+        @endif
     </section>
+    
 
 
     <!-- 
