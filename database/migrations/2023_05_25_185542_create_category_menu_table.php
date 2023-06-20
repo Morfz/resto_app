@@ -12,6 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('category_menu', function (Blueprint $table) {
+            $table->bigIncrements('id');
             $table->foreignId('category_id')->constrained();
             $table->foreignId('menu_id')->constrained();
         });
