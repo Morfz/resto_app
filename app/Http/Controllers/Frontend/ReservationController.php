@@ -47,13 +47,26 @@ class ReservationController extends Controller
     public function stepTwo(Request $request)
     {
         $reservation = $request->session()->get('reservation');
+        // $res_table_ids = Reservation::orderBy('date')
+        // ->get()
+        // ->filter(function($value) use ($reservation) {
+        //     return $value->date->format('Y-m-d') == $reservation->date->format('Y-m-d') && 
+        //         $value->date->format('H:i:s') <= $reservation->date->addHour()->format('H:i:s');
+        // })
+        // ->pluck('table_id');
         $res_table_ids = Reservation::orderBy('date')
         ->get()
         ->filter(function($value) use ($reservation) {
-            return $value->date->format('Y-m-d') == $reservation->date->format('Y-m-d') && 
-                $value->date->format('H:i:s') <= $reservation->date->addHour()->format('H:i:s');
+            $oneHourAfter = $reservation->date->copy()->addHour();
+    
+            return $value->date->format('Y-m-d') == $reservation->date->format('Y-m-d') &&
+                ($value->date->greaterThanOrEqualTo($reservation->date) &&
+                $value->date->lessThan($oneHourAfter) ||
+                $reservation->date->greaterThan($value->date) &&
+                $reservation->date->lessThanOrEqualTo($value->date->copy()->addHour()));
         })
         ->pluck('table_id');
+    
         $tables = Table::where('status', TableStatus::Available)
                 ->where('capacity', '>=', $reservation->guests)
                 ->whereNotIn('id', $res_table_ids)->get();
