@@ -13,15 +13,15 @@ use App\Models\Reservation;
 
 class ReservationController extends Controller
 {
-    public function stepOne(Request $request)
+    public function index(Request $request)
     {
         $reservation = $request->session()->get('reservation');
         $min_date = Carbon::today();
         $max_date = Carbon::today()->addWeek();
-        return view('reservations.step-one', compact('reservation', 'min_date', 'max_date'));
+        return view('reservations.index', compact('reservation', 'min_date', 'max_date'));
     }
 
-    public function storeStepOne(Request $request)
+    public function store(Request $request)
     {
         $validated = $request->validate([
             'name' => ['required'],
@@ -84,40 +84,5 @@ class ReservationController extends Controller
         $request->session()->forget('reservation');
 
         return to_route('welcome')->with('success', 'Telah Berhasil Membuat Reservasi');
-    }
-
-    public function index(Request $request)
-    {
-        $min_date = Carbon::today();
-        $max_date = Carbon::today()->addWeek();
-        $tables = Table::where('status', TableStatus::Available)->get();
-        $reservation = $request->session()->get('reservation');
-        return view('reservations.index', compact('reservation', 'tables', 'min_date', 'max_date'));
-    }
-
-    public function store(Request $request){
-        $table = Table::findOrfail($request->table_id);
-        if ($request->guests > $table->capacity) {
-            return back()->with('warning', 'Guests are more than table capacity');
-        }
-        $request_date = Carbon::parse($request->date);
-        foreach ($table->reservation as $res) {
-            $time_start = Carbon::parse($res->date->format('Y-m-d H:i:s'));
-            $time_end = Carbon::parse($res->date->format('Y-m-d H:i:s'))->addHour();
-            if (($request_date->between($time_start, $time_end)) || ($request_date->eq($time_start) || $request_date->eq($time_end))) {
-                return back()->with('warning', 'This table is reserved for this date.');
-            }
-        }
-        
-        Reservation::create($request->validate([
-            'name' => ['required'],
-            'email' => ['required', 'email'],
-            'phone' => ['required'],
-            'date' => ['required', 'date', new DateBetween, new TimeBetween],
-            'guests' => ['required'],
-            'table_id' => ['required'],
-        ]));
-
-        return to_route('reservations.index')->with('success', 'Reservation created successfully');
     }
 }

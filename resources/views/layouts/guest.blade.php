@@ -35,6 +35,12 @@
         <script defer src="{{ asset ('js/app.js') }}"></script>
 
         <!-- Scripts -->
+
+        <script>
+            function openStepTwoModal() {
+                $('#stepTwoModal').modal('show');
+            }
+        </script>
     </head>
     <body style="height: 100vh; overflow-y: scroll;">
         <div class="container" id="home" >
@@ -94,7 +100,7 @@
                     </div>
                     <div class="nav-right">
                         <section>
-                            <button class="btn" data-text="Come on!" onclick="window.location.href='{{ route('reservations.step.one') }}'">
+                            <button class="btn" data-text="Come on!" onclick="window.location.href='{{ route('reservations.index') }}'">
                                 <span>Buat Reservasi</span>
                             </button>
                             <span class="overlay"></span>

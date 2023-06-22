@@ -24,7 +24,7 @@
                     <span>Pilih Meja</span>
                 </button>
                 <span>
-                    <a href="{{ route('reservations.step.one') }}" class="btn">
+                    <a href="{{ route('reservations.index') }}" class="btn">
                         <span>Back</span>
                     </a>
                 </span>
